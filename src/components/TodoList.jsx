@@ -8,7 +8,7 @@ export const TodoList = ({ data, remove, togleTodo}) => {
         <thead>
           <tr>
             <th>Serail No.</th>
-            <th>Todo Task</th>
+            <th>Grocery Item</th>
             <th>Status</th>
             <th>Toggle Option</th>
             <th>Delete Option</th>
@@ -19,16 +19,16 @@ export const TodoList = ({ data, remove, togleTodo}) => {
             <tr key = {nanoid()}>
               <td>{ind + 1}</td>
               <td> {e.title} </td>
-              <td>{e.status ? "Completed" : "Incomplete"}</td>
+              <td>{e.status ? "Taken" : "Not Taken"}</td>
               <td>
                 <button className = {"toggle"} onClick = {() => {
                     togleTodo(e);
-                }}>Toggle Todo</button>
+                }}>Toggle Item</button>
               </td>
               <td>
               <button className = {"remove"} onClick = {() => {
                   remove(e.id);
-                }}>Delete Todo</button>
+                }}>Delete Item</button>
               </td>
             </tr>
           ))}

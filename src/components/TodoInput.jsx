@@ -11,14 +11,14 @@ export const TodoInput = ({ sendTodo }) => {
           setTodo(e.target.value);
         }}
         type="text"
-        placeholder="Please enter your todo here.."
+        placeholder="Please enter your item here.."
       />
       <button
         onClick={() => {
           sendTodo(todo);
         }}
       >
-        Add Todo
+        Add Item
       </button>
     </div>
   );
